@@ -2,6 +2,7 @@ import { IProduct, ProductServiceAble } from "../interfaces/product";
 
 class ProductServiceMock implements ProductServiceAble {
   reqGetProducts(): Promise<IProduct[]> {
+    // return resolve data with product object mock
     return new Promise<IProduct[]>((resolve, _reject) => {
       resolve([
         {
