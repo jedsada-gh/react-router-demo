@@ -1,4 +1,5 @@
 export interface IProduct {
+  // Interface for product response
   id: number;
   name: string;
   description: string;
@@ -7,9 +8,12 @@ export interface IProduct {
 }
 
 export interface ProductServiceAble {
+  // Interface for product service
+
   reqGetProducts(): Promise<IProduct[]>;
 }
 
 export interface ProductRepositoryAble {
+  // interface for product repository
   getProducts: () => Promise<IProduct[]>;
 }

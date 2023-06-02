@@ -17,11 +17,12 @@ export const LoginPage = () => {
 
   return (
     <button
+      //Click to sign in and then redirect to home page
       onClick={() => {
         userService
           .signIn({ email: "admin@gmail.com", password: "qwerty123!" })
           .then((res) => {
-            console.log("res: ", res)
+            console.log("res: ", res);
             auth.setCredential(res);
             navigate(PROTECTED_PATH.HOME, { replace: true });
           })
